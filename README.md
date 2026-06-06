@@ -106,10 +106,6 @@ Being fully static, it deploys anywhere:
 - **GitHub:** [@aasthass2009](https://github.com/aasthass2009)
 - **Location:** Satna, Madhya Pradesh, India
 
-## 📄 License
 
-Released under the **MIT License** — feel free to use this as a reference for your own portfolio.
-
----
 
 <p align="center">Designed &amp; built by Aastha Chaturvedi · Made with 💜 &amp; a little stardust</p>
