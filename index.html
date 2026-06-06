@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Aastha Chaturvedi — Front-End Developer building interactive, responsive web experiences with React, JavaScript, and Three.js." />
+  <meta name="author" content="Aastha Chaturvedi" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Aastha Chaturvedi — Front-End Developer" />
+  <meta property="og:description" content="I build interactive, responsive web experiences with React and JavaScript." />
+  <meta property="og:type" content="website" />
+
+  <title>Aastha Chaturvedi — Front-End Developer</title>
+
+  <!-- Favicon (inline SVG, no extra file needed) -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90' font-family='sans-serif'>%F0%9F%AA%90</text></svg>" />
+
+  <!-- Google Fonts: Space Grotesk (display) + Inter (body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- ===== COSMIC BACKDROP ===== -->
+  <canvas id="starfield" class="starfield" aria-hidden="true"></canvas>
+
+  <!-- ===== SCROLL PROGRESS COMET ===== -->
+  <div id="scrollProgress" class="scroll-progress" aria-hidden="true"></div>
+
+  <!-- ===== CUSTOM COMET CURSOR (desktop only, JS-activated) ===== -->
+  <div id="cursorRing" class="cursor-ring" aria-hidden="true"></div>
+  <div id="cursorDot" class="cursor-dot" aria-hidden="true"></div>
+
+  <!-- ===== NAVBAR ===== -->
+  <header class="navbar" id="navbar">
+    <nav class="nav container" aria-label="Primary">
+      <a href="#home" class="nav__brand">Aastha<span class="accent">.</span></a>
+
+      <button class="nav__toggle" id="navToggle" aria-label="Open menu" aria-expanded="false" aria-controls="navMenu">
+        <span></span><span></span><span></span>
+      </button>
+
+      <ul class="nav__menu" id="navMenu">
+        <li><a href="#home" class="nav__link">Home</a></li>
+        <li><a href="#about" class="nav__link">About</a></li>
+        <li><a href="#skills" class="nav__link">Skills</a></li>
+        <li><a href="#projects" class="nav__link">Projects</a></li>
+        <li><a href="#contact" class="nav__link nav__link--cta">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <!-- ===== HERO ===== -->
+    <section class="hero" id="home">
+      <div class="hero__bg" aria-hidden="true"></div>
+      <div class="hero__cosmos" aria-hidden="true">
+        <div class="planet planet--ringed"></div>
+        <div class="orbit"><span class="orbit__moon"></span></div>
+      </div>
+      <div class="container hero__inner">
+        <p class="hero__eyebrow reveal">👋 Hi there, I'm</p>
+        <h1 class="hero__name reveal">Aastha Chaturvedi</h1>
+        <h2 class="hero__role reveal"><span class="accent">Front-End</span> Developer</h2>
+        <p class="hero__tagline reveal">I build interactive, responsive web experiences with React and JavaScript.</p>
+        <div class="hero__actions reveal">
+          <a href="#projects" class="btn btn--primary">View Projects</a>
+          <a href="#contact" class="btn btn--ghost">Contact Me</a>
+        </div>
+        <p class="hero__location reveal">📍 Satna, Madhya Pradesh, India</p>
+      </div>
+      <a href="#about" class="hero__scroll" aria-label="Scroll to About">
+        <span class="hero__mouse"><span></span></span>
+      </a>
+    </section>
+
+    <!-- ===== ABOUT ===== -->
+    <section class="section" id="about">
+      <div class="container">
+        <header class="section__head reveal">
+          <span class="section__index">01</span>
+          <h2 class="section__title">About Me</h2>
+        </header>
+        <div class="about reveal">
+          <p>
+            Hi! I'm Aastha — an MCA graduate and front-end developer who loves turning
+            ideas into clean, accessible interfaces. I care a lot about thoughtful UI,
+            smooth interactions, and writing code that's a pleasure to maintain.
+          </p>
+          <p>
+            My day-to-day is mostly <strong>React</strong> and modern <strong>JavaScript</strong>,
+            with a soft spot for <strong>REST API integration</strong> and
+            <strong>3D web graphics</strong> using Three.js. I'm always learning something
+            new and building things to see how they work. If it lives in the browser,
+            I'm probably curious about it.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== SKILLS ===== -->
+    <section class="section section--alt" id="skills">
+      <div class="container">
+        <header class="section__head reveal">
+          <span class="section__index">02</span>
+          <h2 class="section__title">Skills &amp; Tools</h2>
+        </header>
+
+        <div class="skills">
+          <article class="skill-group reveal">
+            <h3 class="skill-group__title">Frontend</h3>
+            <ul class="pills">
+              <li class="pill">HTML5</li>
+              <li class="pill">CSS3</li>
+              <li class="pill">JavaScript ES6+</li>
+              <li class="pill">React.js</li>
+              <li class="pill">Three.js</li>
+            </ul>
+          </article>
+
+          <article class="skill-group reveal">
+            <h3 class="skill-group__title">Backend</h3>
+            <ul class="pills">
+              <li class="pill">Python</li>
+              <li class="pill">Node.js (Serverless)</li>
+            </ul>
+          </article>
+
+          <article class="skill-group reveal">
+            <h3 class="skill-group__title">Database</h3>
+            <ul class="pills">
+              <li class="pill">SQL</li>
+            </ul>
+          </article>
+
+          <article class="skill-group reveal">
+            <h3 class="skill-group__title">Tools</h3>
+            <ul class="pills">
+              <li class="pill">VS Code</li>
+              <li class="pill">Git</li>
+              <li class="pill">GitHub</li>
+              <li class="pill">Vercel</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== PROJECTS ===== -->
+    <section class="section" id="projects">
+      <div class="container">
+        <header class="section__head reveal">
+          <span class="section__index">03</span>
+          <h2 class="section__title">Projects</h2>
+        </header>
+
+        <div class="projects">
+          <!-- ============================================================= -->
+          <!-- PROJECT CARD — copy this whole <article> block to add another. -->
+          <!-- Update: title, description, .tag list, and the two button hrefs. -->
+          <!-- ============================================================= -->
+          <article class="project-card reveal" data-tilt>
+            <div class="project-card__top">
+              <span class="project-card__icon" aria-hidden="true">🌍</span>
+              <div class="project-card__links">
+                <a href="https://github.com/aasthass2009/earth-weather" class="icon-link" target="_blank" rel="noopener noreferrer" aria-label="View source on GitHub">
+                  <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true"><path d="M12 .5a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2c-3.3.7-4-1.6-4-1.6-.6-1.4-1.3-1.8-1.3-1.8-1.1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1.1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.7-1.6-2.7-.3-5.500-1.2-5.5-5.3 0-1.2.4-2.1 1.1-2.9-.1-.3-.5-1.4.1-2.9 0 0 .9-.3 3 1.1a10.4 10.4 0 0 1 5.5 0c2.1-1.4 3-1.1 3-1.1.6 1.5.2 2.6.1 2.9.7.8 1.1 1.7 1.1 2.9 0 4.1-2.8 5-5.5 5.3.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A12 12 0 0 0 12 .5Z"/></svg>
+                </a>
+              </div>
+            </div>
+
+            <h3 class="project-card__title">Earth Weather</h3>
+            <p class="project-card__subtitle">3D Interactive Weather Globe</p>
+            <p class="project-card__desc">
+              A cinematic 3D Earth built with Three.js and custom GLSL shaders. Search any
+              city to see live weather; the globe rotates to the location and drops a pin.
+            </p>
+
+            <ul class="tags">
+              <li class="tag">Three.js</li>
+              <li class="tag">GLSL</li>
+              <li class="tag">JavaScript</li>
+              <li class="tag">REST API</li>
+              <li class="tag">Serverless</li>
+              <li class="tag">Vercel</li>
+            </ul>
+
+            <div class="project-card__actions">
+              <a href="https://earth-weather-two.vercel.app" class="btn btn--primary btn--sm" target="_blank" rel="noopener noreferrer">Live Demo</a>
+              <a href="https://github.com/aasthass2009/earth-weather" class="btn btn--ghost btn--sm" target="_blank" rel="noopener noreferrer">GitHub</a>
+            </div>
+          </article>
+          <!-- ===== END PROJECT CARD ===== -->
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== CONTACT ===== -->
+    <section class="section section--alt" id="contact">
+      <div class="container">
+        <header class="section__head reveal">
+          <span class="section__index">04</span>
+          <h2 class="section__title">Get In Touch</h2>
+        </header>
+
+        <div class="contact reveal">
+          <p class="contact__lead">
+            I'm open to new opportunities and collaborations. Have a project in mind,
+            or just want to say hi? My inbox is always open.
+          </p>
+          <a href="mailto:aasthass2009@gmail.com" class="btn btn--primary contact__email">Say Hello 👋</a>
+
+          <ul class="socials">
+            <li>
+              <a href="https://github.com/aasthass2009" class="social" target="_blank" rel="noopener noreferrer">
+                <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor" aria-hidden="true"><path d="M12 .5a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2c-3.3.7-4-1.6-4-1.6-.6-1.4-1.3-1.8-1.3-1.8-1.1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1.1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.7-1.6-2.7-.3-5.5-1.2-5.5-5.3 0-1.2.4-2.1 1.1-2.9-.1-.3-.5-1.4.1-2.9 0 0 .9-.3 3 1.1a10.4 10.4 0 0 1 5.5 0c2.1-1.4 3-1.1 3-1.1.6 1.5.2 2.6.1 2.9.7.8 1.1 1.7 1.1 2.9 0 4.1-2.8 5-5.5 5.3.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A12 12 0 0 0 12 .5Z"/></svg>
+                <span>GitHub</span>
+              </a>
+            </li>
+            <li>
+              <!-- TODO: replace with your real LinkedIn URL -->
+              <a href="https://www.linkedin.com/in/your-linkedin-username" class="social" target="_blank" rel="noopener noreferrer">
+                <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor" aria-hidden="true"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.13 1.45-2.13 2.94v5.67H9.35V9h3.42v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.07 2.07 0 1 1 0-4.14 2.07 2.07 0 0 1 0 4.14zM7.12 20.45H3.55V9h3.57v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></svg>
+                <span>LinkedIn</span>
+              </a>
+            </li>
+            <li>
+              <!-- TODO: replace with your real LeetCode URL -->
+              <a href="https://leetcode.com/u/your-leetcode-username" class="social" target="_blank" rel="noopener noreferrer">
+                <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor" aria-hidden="true"><path d="M16.1 1.6a1.4 1.4 0 0 0-2 0l-5.9 6-3 3a4.6 4.6 0 0 0 0 6.5l5 5a4.6 4.6 0 0 0 6.5 0l2.5-2.5a1.4 1.4 0 0 0-2-2l-2.5 2.5a1.8 1.8 0 0 1-2.6 0l-5-5a1.8 1.8 0 0 1 0-2.6l3-3 5.9-6a1.4 1.4 0 0 0 0-1.4zM21.8 11.3h-8a1.4 1.4 0 1 0 0 2.8h8a1.4 1.4 0 0 0 0-2.8z"/></svg>
+                <span>LeetCode</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <p>Designed &amp; built by Aastha Chaturvedi</p>
+      <p>&copy; <span id="year"></span> · Made with <span class="accent">♥</span></p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
